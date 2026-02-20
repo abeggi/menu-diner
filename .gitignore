@@ -1,0 +1,9 @@
+node_modules
+.env
+menu.db
+public/uploads/*
+!public/uploads/.gitkeep
+server.pid
+server.log
+diner-menu-latest.tar
+.DS_Store

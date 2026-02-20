@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #d94a38;
+    --primary-hover: #c0392b;
+    --bg-color: #fcfbf9;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    --border-color: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
+/* ==================================
+   PUBLIC MENU PAGE
+   ================================== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: -3rem auto 3rem auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.category-section {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.category-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    border-bottom: 1px dotted var(--border-color);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: translateX(5px);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.item-info {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.item-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.item-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.item-price {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.menu-notes-container {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-style: italic;
+    border-top: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: var(--text-main);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.admin-link {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.admin-link:hover {
+    color: white;
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* ==================================
+   ADMIN PANEL
+   ================================== */
+.admin-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+}
+
+.btn-secondary {
+    background: #ecf0f1;
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background: #bdc3c7;
+}
+
+.btn-danger {
+    background: #e74c3c;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+.btn-small {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+}
+
+.admin-list {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.admin-list h3 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.admin-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-item-row:last-child {
+    border-bottom: none;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Modal styles for simple editing */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-item {
+        flex-direction: column;
+    }
+
+    .item-info {
+        padding-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .category-section {
+        padding: 1.5rem;
+    }
+
+    .admin-item-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

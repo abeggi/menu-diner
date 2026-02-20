@@ -1,0 +1,20 @@
+services:
+  diner-menu:
+    image: abeggi/diner-menu
+    container_name: diner-menu-app
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount database and uploads using explicit bind mounts so they persist outside the container
+      - type: bind
+        source: ./menu.db
+        target: /app/menu.db
+      - type: bind
+        source: ./public/uploads
+        target: /app/public/uploads
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - ADMIN_PASSWORD=menuadmin
+      - SESSION_SECRET=super-secret-key-change-me

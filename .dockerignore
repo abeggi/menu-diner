@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.git
+.env
+menu.db
+public/uploads/*
+!public/uploads/.gitkeep
+server.pid
+server.log
