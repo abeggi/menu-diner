@@ -13,8 +13,18 @@ cd "$APP_DIR" || exit
 
 # 1. Verifica installazione Node.js e NPM
 if ! command -v node &> /dev/null; then
-    echo "ERRORE: Node.js non è installato. Per favore installalo prima di continuare."
-    exit 1
+    echo "ATTENZIONE: Node.js non è installato."
+    read -p "Vuoi procedere con l'installazione automatica di Node.js 20? (s/n): " install_node
+    if [[ "$install_node" =~ ^[SsYy]$ ]]; then
+        echo "Installazione di Node.js 20 in corso..."
+        # Utilizza NodeSource per installare una versione recente di Node.js su Ubuntu
+        curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        echo "Node.js installato correttamente."
+    else
+        echo "ERRORE: Node.js è richiesto per far girare l'applicazione. Installalo manualmente e riprova."
+        exit 1
+    fi
 fi
 
 # 2. Installazione dipendenze locali
