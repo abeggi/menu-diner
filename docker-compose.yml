@@ -15,6 +15,7 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+      # non toccare la porta
       - PORT=3000
       - ADMIN_PASSWORD=menuadmin
       - SESSION_SECRET=super-secret-key-change-me
