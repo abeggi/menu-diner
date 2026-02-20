@@ -1,4 +1,4 @@
-# Tavola Calda Menu App
+# Menu Diner App
 
 Un'applicazione elegante e mobile-friendly per la gestione di un menu di una tavola calda/diner.
 
