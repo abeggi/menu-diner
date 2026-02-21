@@ -21,5 +21,5 @@ Un'applicazione elegante e mobile-friendly per la gestione di un menu di una tav
    ```
 L'app sarà disponibile all'indirizzo `http://localhost:3000`.
 
-## Configurazione
+## Configurazione ambiente
 Puoi cambiare la password e altre impostazioni modificando la sezione `environment` nel file `docker-compose.yml`.
